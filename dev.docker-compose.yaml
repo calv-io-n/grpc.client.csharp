@@ -1,0 +1,11 @@
+version: '3'
+services:
+  identity:
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    volumes:
+      - .:/workspace
+    command: "dotnet watch run"
+    ports:
+      - 5000:5000
